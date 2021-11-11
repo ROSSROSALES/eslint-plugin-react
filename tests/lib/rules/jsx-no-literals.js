@@ -284,6 +284,10 @@ ruleTester.run('jsx-no-literals', rule, {
         <img alt='blank image'></img>
       `,
     },
+    {
+      code: '<div>&mdash;</div>',
+      options: [{ noStrings: true, allowedStrings: ['&mdash;'] }],
+    },
   ]),
 
   invalid: parsers.all([

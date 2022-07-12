@@ -285,8 +285,16 @@ ruleTester.run('jsx-no-literals', rule, {
       `,
     },
     {
-      code: '<div>&mdash;</div>',
-      options: [{ noStrings: true, allowedStrings: ['&mdash;'] }],
+      code: `
+        <div>&mdash;</div>
+      `,
+      options: [{ noStrings: true, allowedStrings: ['&mdash;', '—'] }],
+    },
+    {
+      code: `
+        <div>—</div>
+      `,
+      options: [{ noStrings: true, allowedStrings: ['&mdash;', '—'] }],
     },
   ]),
 

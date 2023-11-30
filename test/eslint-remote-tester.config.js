@@ -1,3 +1,5 @@
+// test
+
 'use strict';
 
 const eslintRemoteTesterRepositories = require('eslint-remote-tester-repositories');
